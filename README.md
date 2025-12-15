@@ -2,6 +2,8 @@
 
 [Jam.dev Video](https://jam.dev/c/0ccb6ebe-2909-4f12-8d5e-4bf3f071d6ff)
 
+[Live Project](https://novacrust-assesment.vercel.app/)
+
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
 ## Prerequisites
@@ -32,8 +34,18 @@ You can start editing the page by modifying `app/page.tsx`. The page auto-update
 
 - **app/**: Contains the App Router pages, layouts, and global styles.
 - **src/component/**: Reusable UI components.
+- **src/hooks/**: Custom React hooks for business logic and state management.
 - **src/definitions/**: TypeScript type definitions and interfaces with Mock data.
 - **public/**: Static assets such as images and fonts.
+
+## Architecture Assessment
+
+This project aims for a Clean Architecture approach by separating the User Interface from the Business Logic.
+
+### Modular Design
+- **UI Component (`ConversionWidget.tsx`)**: Handles the presentation layer, receiving data and callbacks. It is purely responsible for rendering the UI.
+- **Logic Hook (`useConversionLogic.ts`)**: Encapsulates the state management, form validation, and event handlers. This keeps the component clean and the logic testable/reusable.
+- **Layout (`App.tsx`)**: Serves as the main container/layout wrapper for the widget.
 
 ## Learn More
 
