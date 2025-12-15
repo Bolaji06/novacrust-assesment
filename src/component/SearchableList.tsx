@@ -1,6 +1,5 @@
-
-import React, { useState, useMemo } from 'react';
-import { SearchIcon } from './Icons';
+import React, { useState, useMemo } from "react";
+import { SearchIcon } from "./Icons";
 
 export interface ListItem {
   id: string;
@@ -20,7 +19,7 @@ export const SearchableList: React.FC<SearchableListProps> = ({
   onSelect,
   hasSearch = false,
 }) => {
-  const [searchQuery, setSearchQuery] = useState('');
+  const [searchQuery, setSearchQuery] = useState("");
 
   const filteredItems = useMemo(() => {
     if (!searchQuery) return items;
@@ -33,7 +32,7 @@ export const SearchableList: React.FC<SearchableListProps> = ({
   }, [items, searchQuery]);
 
   return (
-    <div className="absolute left-0 right-0 top-full mt-2 bg-white rounded-2xl shadow-dropdown border border-gray-100 p-2 z-50 animate-in fade-in slide-in-from-top-2 duration-200">
+    <div className="absolute left-0 right-0 top-full mt-2 bg-white rounded-2xl shadow-dropdown border border-gray-300 p-2 z-50 animate-in fade-in slide-in-from-top-2 duration-200">
       {hasSearch && (
         <div className="p-2">
           <div className="relative">
@@ -49,7 +48,7 @@ export const SearchableList: React.FC<SearchableListProps> = ({
           </div>
         </div>
       )}
-      
+
       <div className="max-h-60 overflow-y-auto">
         {filteredItems.length > 0 ? (
           filteredItems.map((item) => (
@@ -63,10 +62,11 @@ export const SearchableList: React.FC<SearchableListProps> = ({
                 <span className="font-semibold text-sm text-primary group-hover:text-primary transition-colors">
                   {item.title}
                   {item.subtitle && (
-                     <span className="text-gray-500 font-normal ml-1">- {item.subtitle}</span>
+                    <span className="text-gray-500 font-normal ml-1">
+                      - {item.subtitle}
+                    </span>
                   )}
                 </span>
-                
               </div>
             </button>
           ))
