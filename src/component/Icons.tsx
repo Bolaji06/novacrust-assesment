@@ -33,16 +33,3 @@ export const SearchIcon = ({ className }: { className?: string }) => (
   </svg>
 );
 
-export const CryptoIcon = ({ color, label, subLabel }: { color: string, label: string, subLabel?: string }) => (
-  <div className="flex items-center justify-center w-6 h-6 rounded-full text-[10px] font-bold text-white shrink-0" style={{ backgroundColor: color }}>
-    {label[0]}
-  </div>
-);
-
-export const FlagIcon = ({ color }: { color: string }) => (
-  <div className="flex w-6 h-6 rounded-full overflow-hidden shrink-0 border border-gray-100">
-    <div className="w-1/3 h-full bg-green-600"></div>
-    <div className="w-1/3 h-full bg-white"></div>
-    <div className="w-1/3 h-full bg-green-600"></div>
-  </div>
-);

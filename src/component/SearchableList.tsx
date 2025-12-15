@@ -4,7 +4,7 @@ import { SearchIcon } from "./Icons";
 export interface ListItem {
   id: string;
   title: string;
-  subtitle?: string; // For network name or extra info
+  subtitle?: string;
   icon: React.ReactNode;
 }
 

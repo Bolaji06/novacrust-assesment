@@ -6,7 +6,7 @@ export const currencies: Currency[] = [
     code: "ETH",
     name: "Ethereum",
     iconType: "crypto",
-    color: "#627EEA",
+    color: "#627EEA", 
     iconPath: "/icons/eth_icon.svg",
   },
   {

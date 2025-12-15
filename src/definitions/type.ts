@@ -6,7 +6,7 @@ export interface Currency {
   code: string;
   name: string;
   iconType: 'crypto' | 'fiat';
-  network?: string; // e.g., CELO, TON, BNB
+  network?: string;
   color: string;
   iconPath: string | StaticImageData;
 }

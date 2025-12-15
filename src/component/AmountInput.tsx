@@ -1,6 +1,6 @@
 import React from "react";
-import { Currency, TabType } from "../definitions/type";
-import { ChevronDown, CryptoIcon, FlagIcon } from "./Icons";
+import { Currency} from "../definitions/type";
+import { ChevronDown } from "./Icons";
 import Image from "next/image";
 
 interface AmountInputProps {

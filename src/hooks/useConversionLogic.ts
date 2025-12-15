@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { currencies, wallets } from "../definitions/data";
 import { TabType, Currency, Wallet } from "../definitions/type";
 
@@ -10,8 +10,8 @@ export const useConversionLogic = () => {
   const [receiveAmount, setReceiveAmount] = useState("1.00");
 
   // Selected Items
-  const [selectedPayCurrency, setSelectedPayCurrency] = useState<Currency>(currencies[0]); // ETH
-  const [selectedReceiveCurrency, setSelectedReceiveCurrency] = useState<Currency>(currencies[1]); // NGN
+  const [selectedPayCurrency, setSelectedPayCurrency] = useState<Currency>(currencies[0]);
+  const [selectedReceiveCurrency, setSelectedReceiveCurrency] = useState<Currency>(currencies[1]);
   const [selectedPayFrom, setSelectedPayFrom] = useState<Wallet | null>(null);
   const [selectedPayTo, setSelectedPayTo] = useState<Wallet | null>(null);
 
